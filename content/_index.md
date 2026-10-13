@@ -1,80 +1,29 @@
 ---
-# Leave the homepage title empty to use the site title
-title:
-date: 2022-10-24
+title: C2S2
 type: landing
-
 sections:
-  - block: hero
+  - block: c2s2-hero
+    id: home
     content:
-      title: |
-        Wowchemy
-        Research Group
-      image:
-        filename: welcome.jpg
-      text: |
-        <br>
-        
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
-  
-  - block: collection
+      eyebrow: University of Trento · Fondazione Bruno Kessler
+      title: Understanding society through data.
+      text: Center for Computational Social Science and Human Dynamics
+      description: Connecting the social sciences and computational methods to study human behaviour and a changing society.
+  - block: c2s2-research
+    id: research
     content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
-    design:
-      view: card
-      columns: '1'
-  
-  - block: markdown
+      eyebrow: Our research
+      title: Different perspectives. Shared questions.
+      text: We bring computational methods into dialogue with social theory.
+  - block: c2s2-events
+    id: events
     content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
-      spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
-
-  - block: collection
+      eyebrow: Ideas in conversation
+      title: Events & conversations
+      count: 3
+  - block: c2s2-community
+    id: community
     content:
-      title: Latest Preprints
-      text: ""
-      count: 5
-      filters:
-        folders:
-          - publication
-        publication_type: 'article'
-    design:
-      view: citation
-      columns: '1'
-
-  - block: markdown
-    content:
-      title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-    design:
-      columns: '1'
+      title: A meeting point for disciplines.
+      text: An interdisciplinary community working across computational social science and data science.
 ---

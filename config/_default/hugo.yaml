@@ -3,8 +3,8 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Wowchemy Research Group # Website name
-baseURL: 'https://example.com/' # Website URL
+title: C2S2
+baseURL: 'https://c2s2-trento.github.io/web/'
 
 ############################
 ## LANGUAGE
@@ -34,7 +34,7 @@ permalinks:
   publication_types: '/publication-type/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
+  home: [HTML, RSS, JSON, WebAppManifest]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
@@ -45,7 +45,6 @@ taxonomies:
   tag: tags
   category: categories
   publication_type: publication_types
-  author: authors
 markup:
   _merge: deep
 related:
@@ -61,3 +60,6 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+
+buildFuture: true # Event archives also list scheduled events.
+disableKinds: [taxonomy, term]

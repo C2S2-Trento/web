@@ -1,0 +1,12 @@
+{{ $c := .wcBlock.content }}
+<div class="c2-hero">
+  <div class="c2-hero-copy">
+    <p class="c2-eyebrow">{{ $c.eyebrow }}</p>
+    <h1>{{ $c.title }}</h1>
+    <p class="c2-full-name">{{ $c.text }}</p>
+    <p class="c2-intro">{{ $c.description }}</p>
+    <div class="c2-actions"><a class="c2-button" href="{{ "research/" | relURL }}">Explore our research <span aria-hidden="true">↗</span></a><a class="c2-text-link" href="{{ "about/" | relURL }}">Meet C2S2 <span aria-hidden="true">→</span></a></div>
+  </div>
+  <figure class="c2-network"><img src="{{ "media/network.svg" | relURL }}" width="640" height="640" alt="Abstract illustration of connected communities forming a social network"><figcaption>PEOPLE · DATA · CONNECTIONS</figcaption></figure>
+</div>
+<div class="c2-partners"><span>A joint research center</span><a href="https://www.unitn.it/en">University of Trento <span aria-hidden="true">↗</span></a><a href="https://www.fbk.eu/en/">Fondazione Bruno Kessler <span aria-hidden="true">↗</span></a><span class="c2-since">Trento, Italy · Est. 2021</span></div>

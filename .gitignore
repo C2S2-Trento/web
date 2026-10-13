@@ -5,3 +5,8 @@
 /resources/
 public/
 assets/jsconfig.json
+
+.DS_Store
+.hugo_build.lock
+.hugo_cache/
+.tools/

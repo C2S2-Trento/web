@@ -1,11 +1,5 @@
 ---
-title: Recent & Upcoming Events
-
-# Listing view
-view: compact
-
-# Optional header image (relative to `assets/media/` folder).
-banner:
-  caption: ''
-  image: ''
+title: Events & conversations
+type: event
+subtitle: Seminars, meetings and conferences from our community.
 ---

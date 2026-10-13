@@ -1,0 +1,1 @@
+{{ define "main" }}<main id="main-content" class="c2-page container"><p class="c2-eyebrow">{{ .Params.eyebrow | default "C2S2 · University of Trento & FBK" }}</p><h1>{{ .Title }}</h1>{{ with .Params.subtitle }}<p class="c2-page-intro">{{ . }}</p>{{ end }}<div class="c2-prose">{{ .Content }}</div></main>{{ end }}
