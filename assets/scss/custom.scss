@@ -171,6 +171,11 @@ p { line-height: 1.65; }
 .c2-publication-authors { font-size: 14px; color: $muted; line-height: 1.65; margin-bottom: 8px; }
 .c2-publication-venue { font-size: 14px; margin-bottom: 15px; }
 .c2-publication-links { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12px; font-weight: 600; }
+.c2-publication-tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 16px 0 0; list-style: none; }
+.c2-publication-tags a { display: inline-block; padding: 5px 10px; border-radius: 3px; background: #e7e1ed; color: $purple; font-size: 12px; }
+.c2-publication-tags a:hover { background: #dcd2e7; }
+.c2-area-publications { margin-top: 50px; max-width: 900px; }
+.c2-area-publications > h2 { font-size: 30px; margin-bottom: 12px; }
 .c2-citation { margin-top: 16px; font-size: 12px; color: $muted; }
 .c2-citation summary { cursor: pointer; width: fit-content; }
 .c2-citation pre { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 15px; padding: 20px; color: $ink; background: #eeece8; font-size: 11px; }

@@ -1,6 +1,7 @@
 ---
 title: "Collective behavior and action: democracy, decision making, cultural and social dynamics"
 type: c2s2
+research_area: collective-behavior-action
 weight: 2
 eyebrow: Research area
 summary: "How groups form opinions, make decisions and act together, including the role of generative AI."

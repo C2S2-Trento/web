@@ -1,6 +1,7 @@
 ---
 title: "Human and social behavior: routines, habits, mobility"
 type: c2s2
+research_area: human-social-behavior
 weight: 1
 eyebrow: Research area
 summary: "How routines, habits and mobility connect individual decisions to broader social patterns."

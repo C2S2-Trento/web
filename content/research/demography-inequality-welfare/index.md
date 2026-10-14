@@ -1,6 +1,7 @@
 ---
 title: "Demography, social inequalities, labour market, and welfare systems dynamics"
 type: c2s2
+research_area: demography-inequality-welfare
 weight: 3
 eyebrow: Research area
 summary: "How demographic change, inequality, work and welfare systems shape society."

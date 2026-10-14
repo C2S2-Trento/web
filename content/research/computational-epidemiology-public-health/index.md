@@ -1,6 +1,7 @@
 ---
 title: "Computational epidemiology and public health"
 type: c2s2
+research_area: computational-epidemiology-public-health
 weight: 4
 eyebrow: Research area
 summary: "Modeling disease spread, health behaviors and population-level interventions."

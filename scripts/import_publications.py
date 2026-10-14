@@ -11,6 +11,7 @@ from pybtex.database import BibliographyData, parse_file
 from pylatexenc.latex2text import LatexNodes2Text
 
 ROOT = Path(__file__).resolve().parents[1]
+RESEARCH_AREAS = json.loads((ROOT / 'data/research_areas.json').read_text(encoding='utf-8'))
 
 
 def plain(value):
@@ -48,6 +49,11 @@ def convert(source):
             raise ValueError(f'{key}: citation keys must use letters, numbers, dots, colons, underscores or hyphens')
         if fields.get('crossref'):
             raise ValueError(f'{key}: export a self-contained entry (expand crossref fields first)')
+        research_areas = [area.strip() for area in fields.get('research_areas', '').split(',')]
+        if not 1 <= len(research_areas) <= 2 or any(area not in RESEARCH_AREAS for area in research_areas):
+            raise ValueError(f'{key}: research_areas must contain one or two valid area slugs: {", ".join(RESEARCH_AREAS)}')
+        if len(set(research_areas)) != len(research_areas):
+            raise ValueError(f'{key}: duplicate research area')
         for field in ('title', 'year'):
             if not fields.get(field, '').strip():
                 raise ValueError(f'{key}: missing {field}')
@@ -79,6 +85,7 @@ def convert(source):
         # Re-export one parsed entry: macros are expanded and valid LaTeX is retained.
         citation = BibliographyData(entries={key: entry}).to_string('bibtex')
         item = dict(key=key, title=title, authors=authors, year=int(fields['year']), venue=venue,
+                    research_areas=research_areas,
                     doi=doi, url='https://doi.org/' + quote(doi, safe='/():;.-_') if doi else url,
                     bibtex=citation, featured=boolean(fields.get('featured'), False, key, 'featured'),
                     type='Conference paper' if entry.type == 'inproceedings' else 'Book chapter' if entry.type in ('inbook','incollection') else 'Preprint' if entry.type in ('unpublished','misc') else 'Journal article' if entry.type == 'article' else 'Research item',

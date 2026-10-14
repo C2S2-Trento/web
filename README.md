@@ -101,7 +101,22 @@ The Publications page starts with 25 selected research items from 2023–2026 by
 3. Save while `./scripts/preview.sh` is running: the page updates automatically. Items are grouped by year, newest first, then alphabetically by title.
 4. Commit and push the bibliography change. GitHub automatically imports it before building the website.
 
-Each entry requires `title`, `author`, a four-digit `year`, a venue (`journal`, `booktitle`, `publisher` or `howpublished`), and either `doi` or `url`. Use `and` between authors, as usual in BibTeX. UTF-8 names and standard LaTeX accents are supported. Use self-contained entries; expand inherited `crossref` fields before importing.
+Each entry requires `title`, `author`, a four-digit `year`, a venue (`journal`, `booktitle`, `publisher` or `howpublished`), either `doi` or `url`, and one or two `research_areas`. Use `and` between authors, as usual in BibTeX. UTF-8 names and standard LaTeX accents are supported. Use self-contained entries; expand inherited `crossref` fields before importing.
+
+Assign research-area tags with comma-separated slugs, for example:
+
+```bibtex
+research_areas = {human-social-behavior, demography-inequality-welfare},
+```
+
+| Research area tag | Slug |
+| --- | --- |
+| Human and social behavior | `human-social-behavior` |
+| Collective behavior and action | `collective-behavior-action` |
+| Demography, inequality and welfare | `demography-inequality-welfare` |
+| Epidemiology and public health | `computational-epidemiology-public-health` |
+
+Tags link to the corresponding research-area page, which automatically lists its matching publications, newest first. A paper with two tags appears on both pages and only once in the main bibliography. Missing, unknown, duplicate or more than two tags stop the import with an error. The labels are defined in `data/research_areas.json`; assignments live only in `publications.bib`. The initial assignments are editorial topic classifications for review, not author-supplied metadata.
 
 Optional fields:
 
