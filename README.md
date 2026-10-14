@@ -48,7 +48,9 @@ Content files use Markdown. The block between `---` lines contains settings; the
 
 ### Add a person
 
-Duplicate an existing person's folder under `content/authors/`, rename it, then change the name, surname, initials and profile URL. Keep the `_build` settings: these records populate the people directory and link to existing researcher profiles. The directory sorts by surname. Add portrait support in the people layout if you want to replace initials with approved photographs.
+Duplicate an existing person's folder under `content/authors/`, rename it, then change the name, surname, initials and profile URL. Keep the `_build` settings: these records populate the people directory and link to existing researcher profiles. The directory sorts by surname.
+
+To show a photo, place an approved portrait in `assets/media/people/` and add `portrait: "media/people/<person>.jpg"` to their front matter. Record its source URL in `portrait_source`. Hugo crops the image to a square and displays it in a circular badge. If `portrait` is omitted or its file is missing, the person's initials appear instead. When duplicating a person, update or remove their portrait fields as well.
 
 ### Add an event
 
@@ -137,7 +139,7 @@ The build script imports the bibliography before running Hugo. On Windows, run `
 - The English full name is documented on the [university's C2S2 event page](https://eventi.unitn.it/it/incontri-con-le-unita-di-ricerca-c2s2).
 - About copy summarises the original site's institutional description. The four research areas are based on `content/research_areas.txt`; review their wording before launch.
 - Contact uses the published department address and individual profile links. Add a shared email if the center has one.
-- Initials and an original network illustration are used in place of unverified portraits or institutional logo assets. Review official branding before launch.
+- Seven member portraits come from their linked UniTrento profiles (checked 14 October 2026). Members with other profile links, no profile photo, or unavailable UniTrento pages retain initials. An original network illustration is used in place of institutional logo assets. Review official branding before launch.
 - Site pages are English only; some source/profile links lead to Italian-language third-party pages.
 
 ## Maintenance alternatives
