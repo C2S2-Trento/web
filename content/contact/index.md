@@ -1,5 +1,5 @@
 ---
-title: Let’s connect.
+title: Let’s connect
 type: c2s2
 eyebrow: Contact
 subtitle: Start a conversation with our research community.
