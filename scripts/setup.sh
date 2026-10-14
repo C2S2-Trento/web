@@ -35,4 +35,5 @@ tar -xzf "$task_tmp/$go_file" -C .tools/go-1.23.2
 if [[ -L .tools/go ]]; then unlink .tools/go; fi
 if [[ ! -e .tools/go ]]; then ln -s go-1.23.2/go .tools/go; fi
 .tools/hugo version
+./scripts/setup-publications.sh
 printf '\nReady. Run ./scripts/preview.sh and open the local URL it prints.\n'

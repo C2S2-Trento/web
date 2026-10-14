@@ -1,0 +1,5 @@
+# BibTeX parsing and LaTeX text decoding; no TeX installation required.
+pybtex==0.26.1
+latexcodec==3.0.1
+PyYAML==6.0.3
+pylatexenc==2.10

@@ -10,3 +10,8 @@ assets/jsconfig.json
 .hugo_build.lock
 .hugo_cache/
 .tools/
+
+# Generated from publications.bib before preview/build
+/data/publications.json
+/data/publications.json.tmp
+__pycache__/
