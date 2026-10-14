@@ -2,6 +2,8 @@
 
 An English-only website for the **Center for Computational Social Science and Human Dynamics**, University of Trento and Fondazione Bruno Kessler.
 
+[Website tasks and decisions](docs/todo.md) tracks pending updates and topics to discuss.
+
 Adapted from the local `css-synosys_website-main` template, using its Hugo Blox Bootstrap v5 foundation, landing-page renderer, section parser and purple/green visual direction. The C2S2 navigation, page layouts and content blocks are local customisations. The original template folder is unchanged.
 
 ## Preview locally
