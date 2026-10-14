@@ -40,6 +40,7 @@ Content files use Markdown. The block between `---` lines contains settings; the
 | Publications and featured selections | `publications.bib` |
 | Publications page introduction | `content/publications/index.md` |
 | Events | `content/event/<event>/index.md` |
+| PhDs, postdocs, theses and internships | `content/opportunities/<opportunity>/index.md` |
 | Contact information | `content/contact/index.md` |
 | Navigation links | `config/_default/menus.yaml` |
 | Site description and theme settings | `config/_default/params.yaml` |
@@ -51,6 +52,22 @@ Content files use Markdown. The block between `---` lines contains settings; the
 Duplicate an existing person's folder under `content/authors/`, rename it, then change the name, surname, initials and profile URL. Keep the `_build` settings: these records populate the people directory and link to existing researcher profiles. The directory sorts by surname.
 
 To show a photo, place an approved portrait in `assets/media/people/` and add `portrait: "media/people/<person>.jpg"` to their front matter. Record its source URL in `portrait_source`. Hugo crops the image to a square and displays it in a circular badge. If `portrait` is omitted or its file is missing, the person's initials appear instead. When duplicating a person, update or remove their portrait fields as well.
+
+### Add an opportunity
+
+Create a draft from the reusable template (replace `project-name` with a short lowercase slug):
+
+```sh
+PATH="$PWD/.tools:$PWD/.tools/go/bin:$PATH" .tools/hugo new content --kind opportunity opportunities/project-name/index.md
+```
+
+Edit the generated `content/opportunities/project-name/index.md`. Set the title, a short summary, and `opportunity_type` to `PhD`, `Postdoc`, `Thesis` or `Internship`. The `date` is the posting date; the directory shows newest posts first. Fill in the body sections with the project description, eligibility, practical details and application instructions.
+
+Optional fields are `location`, `deadline` and `application_url`. Leave them empty to hide them. Write the deadline as readable text, including the time zone if there is a specific cutoff, for example `15 March 2027, 17:00 CET`, or `Until filled`. Use a full HTTPS URL for the application link.
+
+Preview with `./scripts/preview.sh --buildDrafts`. When ready, set `draft: false`, then commit and push to publish. The entry automatically appears on the Opportunities page and gets its own detail page. Set `draft: true` again to withdraw a closed opportunity; deadlines are displayed as text and do not automatically remove listings.
+
+The template lives in `archetypes/opportunity.md`; editing it affects future drafts only. The directory introduction is in `content/opportunities/_index.md`. With no published entries, the directory shows its empty message.
 
 ### Add an event
 

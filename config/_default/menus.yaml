@@ -14,6 +14,9 @@ main:
   - name: Events
     url: event/
     weight: 5
+  - name: Opportunities
+    url: opportunities/
+    weight: 6
   - name: Contact
     url: contact/
-    weight: 6
+    weight: 7

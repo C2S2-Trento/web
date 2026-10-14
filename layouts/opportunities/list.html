@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main id="main-content" class="c2-page container">
+  <p class="c2-eyebrow">{{ .Params.eyebrow }}</p>
+  <h1>{{ .Title }}</h1>
+  <p class="c2-page-intro">{{ .Params.subtitle }}</p>
+  <div class="c2-prose">{{ .Content }}</div>
+  {{ if .RegularPages }}
+    <div class="c2-research-grid">
+      {{ range .RegularPages.ByDate.Reverse }}
+        <a class="c2-research-card" href="{{ .RelPermalink }}">
+          <span class="c2-eyebrow">{{ .Params.opportunity_type }}</span>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Params.summary }}</p>
+          {{ with .Params.deadline }}<p><strong>Apply by:</strong> {{ . }}</p>{{ end }}
+          <span class="c2-card-arrow" aria-hidden="true">→</span>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>There are no opportunities listed at the moment.</p>
+  {{ end }}
+</main>
+{{ end }}

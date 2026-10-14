@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main id="main-content" class="c2-page container">
+  <a class="c2-text-link" href="{{ "opportunities/" | relURL }}">← All opportunities</a>
+  <p class="c2-eyebrow c2-event-label">{{ .Params.opportunity_type }}</p>
+  <h1>{{ .Title }}</h1>
+  <p class="c2-page-intro">{{ .Params.summary }}</p>
+  {{ if or .Params.location .Params.deadline }}
+    <div class="c2-event-details">
+      {{ with .Params.location }}<p><strong>Location</strong><br>{{ . }}</p>{{ end }}
+      {{ with .Params.deadline }}<p><strong>Apply by</strong><br>{{ . }}</p>{{ end }}
+    </div>
+  {{ end }}
+  <div class="c2-prose">{{ .Content }}</div>
+  {{ with .Params.application_url }}<a class="c2-button" href="{{ . }}">Application details ↗</a>{{ end }}
+</main>
+{{ end }}
