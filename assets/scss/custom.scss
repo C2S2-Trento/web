@@ -45,7 +45,7 @@ p { line-height: 1.65; }
 .c2-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 50px; margin-bottom: 34px; }
 .c2-section-heading h2 { font-size: 36px; max-width: 580px; margin: 0; line-height: 1.15; }
 .c2-section-heading > p { max-width: 300px; font-size: 15px; color: $muted; margin: 0; }
-.c2-research-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.c2-research-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
 .c2-research-card { display: flex; flex-direction: column; color: $ink; background: $paper; padding: 28px; min-height: 285px; border: 1px solid #d9d4dd; transition: border-color .2s, transform .2s; }
 .c2-research-card:hover { color: $ink; border-color: $purple; transform: translateY(-4px); text-decoration: none; }
 .c2-card-number { font-size: 10px; letter-spacing: .13em; color: $muted; }

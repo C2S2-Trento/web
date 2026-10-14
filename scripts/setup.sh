@@ -20,7 +20,11 @@ go_file="go1.23.2.${platform}-${go_arch}.tar.gz"
 curl --fail --location --retry 3 "https://github.com/gohugoio/hugo/releases/download/v0.135.0/$hugo_file" -o "$task_tmp/$hugo_file"
 curl --fail --location --retry 3 'https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_0.135.0_checksums.txt' -o "$task_tmp/checksums.txt"
 curl --fail --location --retry 3 "https://go.dev/dl/$go_file" -o "$task_tmp/$go_file"
-curl --fail --location --retry 3 "https://go.dev/dl/$go_file.sha256" -o "$task_tmp/go.sha256"
+if [[ "$go_file" == "go1.23.2.darwin-arm64.tar.gz" ]]; then
+  printf '%s\n' 'd87031194fe3e01abdcaf3c7302148ade97a7add6eac3fec26765bcb3207b80f' > "$task_tmp/go.sha256"
+else
+  curl --fail --location --retry 3 "https://go.dev/dl/$go_file.sha256" -o "$task_tmp/go.sha256"
+fi
 verify() {
   if command -v sha256sum >/dev/null; then actual="$(sha256sum "$1" | cut -d ' ' -f1)";
   else actual="$(shasum -a 256 "$1" | cut -d ' ' -f1)"; fi

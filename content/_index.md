@@ -14,7 +14,7 @@ sections:
     content:
       eyebrow: Our research
       title: Different perspectives. Shared questions.
-      text: We bring computational methods into dialogue with social theory.
+      text: Four research areas connect human behaviour, collective action, social inequality and public health.
   - block: c2s2-events
     id: events
     content:

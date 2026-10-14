@@ -135,7 +135,7 @@ The build script imports the bibliography before running Hugo. On Windows, run `
 - Names and external profile links: migrated from [C2S2 people](https://c2s2.unitn.it/chi-siamo.html), retrieved 13 October 2026. Confirm the roster is current; titles, biographies and individual affiliations have not been invented.
 - Ten events (2022–2025): migrated from the [C2S2 homepage](https://c2s2.unitn.it/), with English titles and source links. Historical speaker affiliations describe the original event. Confirm whether newer events should be added.
 - The English full name is documented on the [university's C2S2 event page](https://eventi.unitn.it/it/incontri-con-le-unita-di-ricerca-c2s2).
-- About copy summarises the original site's institutional description. The three research themes are proposed editorial groupings, not an official list of laboratories or funded projects; approve or replace them.
+- About copy summarises the original site's institutional description. The four research areas are based on `content/research_areas.txt`; review their wording before launch.
 - Contact uses the published department address and individual profile links. Add a shared email if the center has one.
 - Initials and an original network illustration are used in place of unverified portraits or institutional logo assets. Review official branding before launch.
 - Site pages are English only; some source/profile links lead to Italian-language third-party pages.
