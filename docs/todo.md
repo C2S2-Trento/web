@@ -4,8 +4,8 @@ Pending updates and topics for the next discussion.
 
 ## Branding
 
-- [ ] Wait for Ivano to provide the official logo, then update the website.
-- [ ] Review the colour scheme once the logo is available and decide whether to adjust it.
+- [x] Wait for Ivano to provide the official logo, then update the website.
+- [x] Review the colour scheme once the logo is available and decide whether to adjust it.
 
 ## Publications
 
