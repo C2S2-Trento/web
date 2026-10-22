@@ -15,7 +15,7 @@ Pending updates and topics for the next discussion.
 
 ## Members
 
-- [ ] Decide whether to keep all members currently listed and agree on how to maintain the roster.
+- [ ] Decide whether to keep all members currently listed and agree on how to maintain the roster - maybe a PhD section? - add Gian Maria.\
 - [ ] Agree on how to collect and update profile information and photos for members without a UniTrento profile: institutional pages, personal websites, or information supplied directly by members.
 
 For now, retain the existing roster and profile links. Use photos from the linked UniTrento profiles where available; keep initials for the remaining members.
