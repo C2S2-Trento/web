@@ -1,8 +1,7 @@
 ---
-title: Let’s connect
+title: Contact
 type: c2s2
 eyebrow: Contact
-subtitle: Start a conversation with our research community.
 ---
 For research enquiries and collaborations, please contact the relevant researcher through the [people directory](../people/).
 

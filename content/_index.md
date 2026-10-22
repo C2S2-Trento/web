@@ -13,17 +13,17 @@ sections:
     id: research
     content:
       eyebrow: Our research
-      title: Different perspectives. Shared questions
+      title: Research areas
       text: Four research areas connect human behaviour, collective action, social inequality and public health.
   - block: c2s2-events
     id: events
     content:
-      eyebrow: Ideas in conversation
-      title: Events & conversations
+      eyebrow: Seminars and conferences
+      title: Events
       count: 3
   - block: c2s2-community
     id: community
     content:
-      title: A meeting point for disciplines
+      title: Our researchers
       text: An interdisciplinary community working across computational social science and data science.
 ---

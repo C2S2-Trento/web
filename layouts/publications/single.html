@@ -6,7 +6,7 @@
 {{ $years = sort (uniq $years) "value" "desc" }}
 {{ $download := resources.FromString "publications/c2s2.bib" $allBib }}
 <main id="main-content" class="c2-page container c2-publications">
-  <p class="c2-eyebrow">{{ .Params.eyebrow }}</p>
+  {{ with .Params.eyebrow }}<p class="c2-eyebrow">{{ . }}</p>{{ end }}
   <div class="c2-publications-heading">
     <div><h1>{{ .Title }}</h1><p class="c2-page-intro">{{ .Params.subtitle }}</p><div class="c2-prose">{{ .Content }}</div></div>
     <div class="c2-publications-count"><strong>{{ len $papers }}</strong><span>selected publications</span><a href="{{ $download.RelPermalink }}" download="c2s2.bib">Download bibliography <span aria-hidden="true">↓</span></a></div>
