@@ -8,7 +8,7 @@ sections:
       eyebrow: University of Trento · Fondazione Bruno Kessler
       title: Understanding society through data
       text: Center for Computational Social Science and Human Dynamics
-      description: Connecting the social sciences and computational methods to study human behaviour and a changing society.
+      description: Connecting social science and computational methods to understand human behaviour, artificial intelligence and a changing society.
   - block: c2s2-research
     id: research
     content:
