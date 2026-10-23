@@ -1,5 +1,5 @@
 ---
-title: A shared space for discovery
+title: About C2S2
 type: c2s2
 eyebrow: About C2S2
 subtitle: Center for Computational Social Science and Human Dynamics
