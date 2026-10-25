@@ -2,7 +2,7 @@
 title: "Moris Triventi"
 last_name: "Triventi"
 initials: "MT"
-profile_url: "https://webapps.unitn.it/du/it/Persona/PER0084294/Didattica"
+profile_url: "https://www.unimi.it/it/ugov/person/moris-triventi"
 user_groups: [Researchers]
 _build:
   render: never
