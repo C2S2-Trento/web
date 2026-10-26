@@ -4,6 +4,8 @@
 
 This is a Hugo site for C2S2. Edit pages in `content/` (research areas, events, people, and publications), site settings in `config/_default/`, and Hugo templates in `layouts/`. Styles and processed images live in `assets/`; files served unchanged live in `static/`. Keep bibliography records in `publications.bib`; `scripts/import_publications.py` generates `data/publications.json`. Python checks are in `tests/`. Treat `examples/original-starter/` as reference material, not current site content.
 
+The Opportunities page always displays guidance that students can contact researchers about thesis projects and internships. Keep this guidance visible whether or not opportunity listings are present; render listings as an optional section below it.
+
 ## Build, Test, and Development Commands
 
 - `./scripts/setup.sh`: install the pinned Hugo Extended, Go, and Python tools into `.tools/` once per machine.
