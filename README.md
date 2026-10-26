@@ -96,7 +96,7 @@ Upcoming events appear on the homepage automatically; otherwise it shows the thr
 
 ### Publications: edit one BibTeX file
 
-The Publications page starts with 25 selected research items from 2023–2026 by researchers in the people directory. [Selection notes and verification sources](docs/publications-curation.md) explain the scope and publication-year choices.
+The main Publications page shows only entries marked `featured = {true}`. Its “See all publications” button opens `/publications/all/`, which lists every published bibliography entry. Both pages group items by year, newest first, then alphabetically by title. [Selection notes and verification sources](docs/publications-curation.md) explain the scope and publication-year choices.
 
 1. Export a paper as **BibTeX** from Zotero, your reference manager or its publisher.
 2. Paste the entry into `publications.bib`, using a unique citation key. Keep full author lists and check the publication year.
@@ -124,14 +124,14 @@ Optional fields:
 
 | Field | Purpose |
 | --- | --- |
-| `featured = {true}` | Adds a Featured badge |
+| `featured = {true}` | Shows the entry on the main Publications page and adds a Featured badge |
 | `selected = {false}` | Hides an entry while keeping it in your source file; entries are shown by default |
 | `pdf = {https://…}` | Adds a public PDF link |
 | `code = {https://…}` | Adds a code link |
 | `correction = {https://…}` | Links to a published correction |
 | `volume`, `number`, `pages` | Adds standard citation details |
 
-To remove a paper, delete its entry or set `selected = {false}`. The page count and year navigation adjust automatically; 25 is the initial selection, not a fixed limit. Visitors can view or download each citation and download the entire visible bibliography. Avoid private notes or local file paths in entries: their fields are included in the public BibTeX downloads.
+To remove a paper, delete its entry or set `selected = {false}`. Removing `featured` or setting it to `false` keeps a paper in the full list and on its research-area pages, but removes it from the main Publications page. Page counts and year navigation adjust automatically. Visitors can view or download each citation; “Download full bibliography” on either page includes all published entries. Entries with `selected = {false}` are excluded from both pages and all downloads. Avoid private notes or local file paths in entries: their fields are included in the public BibTeX downloads.
 
 Do not edit or commit `data/publications.json`: it is generated from the bibliography. Invalid entries stop a production build and produce an explanatory error. During a running preview, the last valid bibliography stays visible until the error is corrected.
 

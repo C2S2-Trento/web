@@ -7,7 +7,7 @@
 {{ end }}
 <section class="c2-area-publications" aria-labelledby="related-publications">
   <h2 id="related-publications">Related publications</h2>
-  <p>{{ len $papers }} selected {{ if eq (len $papers) 1 }}publication{{ else }}publications{{ end }} · <a class="c2-text-link" href="{{ "publications/" | relURL }}">All publications →</a></p>
+  <p>{{ len $papers }} selected {{ if eq (len $papers) 1 }}publication{{ else }}publications{{ end }} · <a class="c2-text-link" href="{{ "publications/all/" | relURL }}">All publications →</a></p>
   {{ range $papers }}
     {{ partial "c2s2/publication.html" . }}
   {{ else }}

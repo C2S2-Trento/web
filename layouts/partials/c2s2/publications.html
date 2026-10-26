@@ -1,0 +1,38 @@
+{{ $papers := site.Data.publications }}
+{{ if not $papers }}{{ errorf "No publications data. Run .tools/bibtex-venv/bin/python scripts/import_publications.py before Hugo." }}{{ end }}
+{{ $showAll := .Params.show_all | default false }}
+{{ $allBib := "" }}
+{{ range $papers }}{{ $allBib = printf "%s%s\n" $allBib .bibtex }}{{ end }}
+{{ if not $showAll }}{{ $papers = where $papers "featured" true }}{{ end }}
+{{ $years := slice }}
+{{ range $papers }}{{ $years = $years | append .year }}{{ end }}
+{{ $years = sort (uniq $years) "value" "desc" }}
+{{ $download := resources.FromString "publications/c2s2.bib" $allBib }}
+<main id="main-content" class="c2-page container c2-publications">
+  {{ with .Params.eyebrow }}<p class="c2-eyebrow">{{ . }}</p>{{ end }}
+  <div class="c2-publications-heading">
+    <div><h1>{{ .Title }}</h1><p class="c2-page-intro">{{ .Params.subtitle }}</p><div class="c2-prose">{{ .Content }}</div></div>
+    <div class="c2-publications-count"><strong>{{ len $papers }}</strong><span>{{ if $showAll }}publications{{ else }}featured publications{{ end }}</span><a href="{{ $download.RelPermalink }}" download="c2s2.bib">Download full bibliography <span aria-hidden="true">↓</span></a></div>
+  </div>
+  <div class="c2-actions c2-publications-actions">
+    {{ if $showAll }}
+    <a class="c2-text-link" href="{{ "publications/" | relURL }}">← Featured publications</a>
+    {{ else }}
+    <a class="c2-button" href="{{ "publications/all/" | relURL }}">See all publications <span aria-hidden="true">→</span></a>
+    {{ end }}
+  </div>
+  {{ if $papers }}
+  <nav class="c2-year-nav" aria-label="Publication years"><span>Browse by year</span>{{ range $years }}<a href="#year-{{ . }}">{{ . }} <small>{{ len (where $papers "year" .) }}</small></a>{{ end }}</nav>
+  {{ range $years }}
+  <section class="c2-publication-year" id="year-{{ . }}" aria-labelledby="heading-{{ . }}">
+    {{ $count := len (where $papers "year" .) }}
+    <div class="c2-year-heading"><h2 id="heading-{{ . }}">{{ . }}</h2><span>{{ $count }} {{ if eq $count 1 }}publication{{ else }}publications{{ end }}</span></div>
+    <div>{{ range where $papers "year" . }}
+      {{ partial "c2s2/publication.html" . }}
+    {{ end }}</div>
+  </section>
+  {{ end }}
+  {{ else }}
+  <p>No featured publications are currently listed. See all publications for the complete list.</p>
+  {{ end }}
+</main>
