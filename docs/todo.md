@@ -2,16 +2,7 @@
 
 Pending updates and topics for the next discussion.
 
-## Branding
 
-- [x] Wait for Ivano to provide the official logo, then update the website.
-- [x] Review the colour scheme once the logo is available and decide whether to adjust it.
-
-## Publications
-
-- [ ] Review the page layout and whether small figures from the papers would improve it. Image work is on hold until discussed.
-- [ ] Agree on what “Featured” means and how featured papers should be selected. Keep the current badges for now.
-- [ ] Decide whether to keep the current selection or show fewer publications, and agree on selection criteria.
 
 ## Members
 

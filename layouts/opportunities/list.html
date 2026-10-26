@@ -4,6 +4,7 @@
   <h1>{{ .Title }}</h1>
   <p class="c2-page-intro">{{ .Params.subtitle }}</p>
   <div class="c2-prose">{{ .Content }}</div>
+  <p>Thesis projects and internships are available to students. To discuss possibilities, contact a researcher through the <a href="{{ "people/" | relURL }}">People page</a> or get in touch with one of the centres listed below.</p>
   {{ if .RegularPages }}
     <div class="c2-research-grid">
       {{ range .RegularPages.ByDate.Reverse }}
@@ -16,8 +17,6 @@
         </a>
       {{ end }}
     </div>
-  {{ else }}
-    <p>There are no opportunities listed at the moment.</p>
   {{ end }}
   {{ partial "c2s2/associated-network.html" . }}
 </main>
