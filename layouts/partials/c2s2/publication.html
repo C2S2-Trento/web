@@ -2,7 +2,7 @@
 <article class="c2-publication{{ if .featured }} c2-publication-featured{{ end }}" id="{{ .key }}">
   <p class="c2-eyebrow">{{ .type }}{{ if .featured }} <span class="c2-publication-badge">Featured</span>{{ end }}</p>
   <h3><a href="{{ .url }}">{{ .title }}</a></h3>
-  <p class="c2-publication-authors">{{ delimit .authors ", " }}</p>
+  <p class="c2-publication-authors">{{ if eq .people_role "editor" }}Edited by {{ end }}{{ delimit .authors ", " }}</p>
   <p class="c2-publication-venue"><cite>{{ .venue }}</cite>{{ with .volume }}, {{ . }}{{ end }}{{ with .number }}({{ . }}){{ end }}{{ with .pages }}, {{ . }}{{ end }} · {{ .year }}</p>
   <div class="c2-publication-links"><a href="{{ .url }}">{{ if .doi }}DOI{{ else }}Read paper{{ end }} <span aria-hidden="true">↗</span></a><a href="{{ $citation.RelPermalink }}" download="{{ .key }}.bib">BibTeX <span aria-hidden="true">↓</span></a>{{ with .pdf }}<a href="{{ . }}">PDF ↗</a>{{ end }}{{ with .code }}<a href="{{ . }}">Code ↗</a>{{ end }}{{ with .correction }}<a href="{{ . }}">Correction ↗</a>{{ end }}</div>
   <ul class="c2-publication-tags" aria-label="Research areas">

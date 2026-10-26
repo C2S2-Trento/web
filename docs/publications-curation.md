@@ -1,8 +1,40 @@
 # Publications selection and verification
 
-Curated on 14 October 2026. The 25 selected papers cover human mobility, social behaviour, misinformation, NLP, demography and spatial analysis. Selection favours recent work (2025–2026), together with relevant 2023–2024 contributions. Every entry has at least one author in the site's existing people directory. This is a selective bibliography of listed researchers, not a claim that all papers were produced under a C2S2 affiliation or a comprehensive ranking of their work. The original roster still needs the owner's review.
+The Featured badge remains an editorial selection. The complete bibliography now lists publications from 2022 onward by the 19 people in the site's directory. It is a record of those researchers' work, not a claim that each item was produced under a C2S2 affiliation. The directory itself remains subject to the owner's review.
 
-24 records were checked against publisher-deposited Crossref metadata, including complete author lists, titles, venues, DOIs and publication dates. The TMLR paper was checked against its publisher's final PDF on OpenReview. Where online-first and issue years differ, the final issue year is used. In particular: *Misinformation…* uses 2024, *Status Spill-Over…* uses 2025, and *Multiverse Analysis* and *Crime Forecasting* use 2026. Conference proceedings use their publication year. No preprint is separately counted when a final version is included.
+## Full bibliography update (26 October 2026)
+
+The bibliography contains 442 records dated 2022–2026: the existing records plus 415 additional items. The additions cover journal articles, books, book chapters, and published conference papers. A work co-authored by multiple listed members appears once. Preprints are omitted; published records are included where available. Supporting files, datasets, software, and other non-publication records are omitted.
+
+The number of added records associated with each directory member is shown below. Counts overlap when two listed members co-authored a paper.
+
+| Member | Added records |
+| --- | ---: |
+| Agnese Vitali | 30 |
+| Alberto Acerbi | 30 |
+| Bruno Lepri | 64 |
+| Diego Giuliani | 12 |
+| Elena Pavan | 10 |
+| Filippo Andrei | 6 |
+| Gian Maria Campedelli | 21 |
+| Giuseppe Alessandro Veltri | 26 |
+| Giuseppe Espa | 21 |
+| Ivano Bison | 8 |
+| Jacopo Staiano | 16 |
+| Marco Guerini | 15 |
+| Maria Michela Dickson | 13 |
+| Maurizio Napolitano | 19 |
+| Michele Tizzoni | 14 |
+| Moris Triventi | 36 |
+| Riccardo Gallotti | 17 |
+| Sara Tonelli | 37 |
+| Stefano Merler | 59 |
+
+OpenAlex member profiles matched to the directory's researchers were used to discover records and associate them with members. DOI-bearing metadata was checked against Crossref. The ACL Anthology's author records were also checked for language-technology proceedings. Where no DOI record was available, a stable publisher or institutional-repository landing page was retained. Records from ambiguous namesake profiles were excluded. Publication year follows publisher metadata, using the issue year when available.
+
+This is a broad indexed bibliography, not a guarantee that every item in every member's CV or institutional repository has been captured. OpenAlex coverage and profile matching can miss or misattribute work; future updates should compare each member's official publication list and correct omissions or mistakes in `publications.bib`.
+
+For the earlier Featured selection, 24 records were checked against publisher-deposited Crossref metadata, including complete author lists, titles, venues, DOIs and publication dates. The TMLR paper was checked against its publisher's final PDF on OpenReview. Where online-first and issue years differ, the final issue year is used. In particular: *Misinformation…* uses 2024, *Status Spill-Over…* uses 2025, and *Multiverse Analysis* and *Crime Forecasting* use 2026. Conference proceedings use their publication year. No preprint is separately counted when a final version is included.
 
 The GPT-4 persuasion article links to its September 2026 author correction as well as the original article. No abstract or claims about research results were generated. Featured badges are editorial selections, not citation-based rankings.
 

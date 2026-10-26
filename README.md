@@ -40,7 +40,7 @@ Content files use Markdown. The block between `---` lines contains settings; the
 | Research overview and theme descriptions | `content/research/` |
 | People directory | `content/authors/<person>/_index.md` |
 | Publications and featured selections | `publications.bib` |
-| Publications page introduction | `content/publications/index.md` |
+| Publications page introduction | `content/publications/_index.md` |
 | Events | `content/event/<event>/index.md` |
 | PhDs, postdocs, theses and internships | `content/opportunities/<opportunity>/index.md` |
 | Contact information | `content/contact/index.md` |
@@ -96,7 +96,7 @@ Upcoming events appear on the homepage automatically; otherwise it shows the thr
 
 ### Publications: edit one BibTeX file
 
-The main Publications page shows only entries marked `featured = {true}`. Its “See all publications” button opens `/publications/all/`, which lists every published bibliography entry. Both pages group items by year, newest first, then alphabetically by title. [Selection notes and verification sources](docs/publications-curation.md) explain the scope and publication-year choices.
+The main Publications page shows entries marked `featured = {true}`. Its “See all publications” button opens `/publications/all/`, which lists publications from 2022 onward for the people in the site's current directory. Both pages group items by year, newest first, then alphabetically by title. [Selection notes and verification sources](docs/publications-curation.md) explain the scope and publication-year choices.
 
 1. Export a paper as **BibTeX** from Zotero, your reference manager or its publisher.
 2. Paste the entry into `publications.bib`, using a unique citation key. Keep full author lists and check the publication year.

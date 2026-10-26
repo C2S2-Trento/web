@@ -59,9 +59,10 @@ def convert(source):
                 raise ValueError(f'{key}: missing {field}')
         if not re.fullmatch(r'\d{4}', fields['year']):
             raise ValueError(f'{key}: year must have four digits')
-        people = entry.persons.get('author', [])
+        people_role = 'author' if entry.persons.get('author') else 'editor'
+        people = entry.persons.get(people_role, [])
         if not people:
-            raise ValueError(f'{key}: missing author')
+            raise ValueError(f'{key}: missing author or editor')
         authors = []
         for person in people:
             name = ' '.join(person.first_names + person.middle_names + person.prelast_names + person.last_names)
@@ -84,7 +85,8 @@ def convert(source):
             raise ValueError(f'{key}: supply a DOI or publisher URL')
         # Re-export one parsed entry: macros are expanded and valid LaTeX is retained.
         citation = BibliographyData(entries={key: entry}).to_string('bibtex')
-        item = dict(key=key, title=title, authors=authors, year=int(fields['year']), venue=venue,
+        item = dict(key=key, title=title, authors=authors, people_role=people_role,
+                    year=int(fields['year']), venue=venue,
                     research_areas=research_areas,
                     doi=doi, url='https://doi.org/' + quote(doi, safe='/():;.-_') if doi else url,
                     bibtex=citation, featured=boolean(fields.get('featured'), False, key, 'featured'),

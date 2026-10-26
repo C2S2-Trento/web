@@ -2,6 +2,6 @@
 title: All publications
 type: publications
 show_all: true
-subtitle: All recent listed work from our research community.
+subtitle: Publications by listed members from 2022 onward.
 ---
-Browse the complete bibliography, ordered by year, newest first.
+Browse publications by current directory members from 2022 onward, ordered by year, newest first.
