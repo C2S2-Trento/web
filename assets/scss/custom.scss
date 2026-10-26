@@ -97,6 +97,16 @@ p { line-height: 1.65; }
 .c2-portrait { display: block; border-radius: 50%; width: 65px; height: 65px; object-fit: cover; }
 .c2-person h2 { font-size: 22px; line-height: 1.25; margin: 20px 0; }
 .c2-person > span:last-child { margin-top: auto; font-size: 11px; color: $muted; }
+.c2-associated-network { margin-top: 72px; padding: 36px; background: $brand-tint; border-top: 3px solid $brand; }
+.c2-associated-network h2 { font-size: 30px; line-height: 1.2; margin: 0 0 14px; }
+.c2-network-intro { max-width: 700px; color: $muted; font-size: 15px; margin: 0 0 30px; }
+.c2-network-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; }
+.c2-network-groups h3 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 12px; line-height: 1.5; }
+.c2-network-groups ul { list-style: none; padding: 0; margin: 0; }
+.c2-network-groups li { border-top: 1px solid #b5d5dc; }
+.c2-network-groups a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; font-size: 15px; line-height: 1.5; }
+.c2-network-groups a > span:first-child { min-width: 0; }
+.c2-network-groups a > span:last-child { flex-shrink: 0; }
 .c2-event-label { margin-top: 45px; margin-bottom: 22px; }
 .c2-event-details { display: flex; gap: 70px; padding: 20px 0; margin-bottom: 30px; border-block: 1px solid #d3dfe1; }
 @media(max-width: 991px) {
@@ -140,6 +150,9 @@ p { line-height: 1.65; }
  .c2-people-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
  .c2-person { padding: 18px; }
  .c2-person h2 { font-size: 19px; }
+ .c2-associated-network { margin-top: 52px; padding: 26px 22px; }
+ .c2-associated-network h2 { font-size: 26px; }
+ .c2-network-groups { grid-template-columns: minmax(0,1fr); gap: 28px; }
  .c2-event-details { flex-direction: column; gap: 5px; }
 }
 @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }

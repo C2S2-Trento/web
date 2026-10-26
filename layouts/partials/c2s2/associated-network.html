@@ -1,0 +1,16 @@
+<section class="c2-associated-network" aria-labelledby="c2-network-heading">
+  <h2 id="c2-network-heading">Explore the C2S2 network</h2>
+  <p class="c2-network-intro">{{ .Params.network_intro }}</p>
+  <div class="c2-network-groups">
+    {{ range site.Data.c2s2_network.groups }}
+    <div>
+      <h3>{{ .name }}</h3>
+      <ul>
+        {{ range .links }}
+        <li><a href="{{ .url }}"><span>{{ .name }}</span><span aria-hidden="true">↗</span></a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</section>
