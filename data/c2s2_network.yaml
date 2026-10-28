@@ -13,7 +13,12 @@ groups:
         url: https://mobs.fbk.eu/home
       - name: CHuB — Complex Human Behaviour Lab
         url: https://chub.fbk.eu/
-      - name: LanD — Language and Dialogue Technologies
-        url: https://land.fbk.eu/
       - name: Health Emergencies Center
         url: https://he.fbk.eu/
+      - name: LanD — Language and Dialogue Technologies
+        url: https://land.fbk.eu/
+      - name: DH — Digital Humanities Lab
+        url: https://dh.fbk.eu/
+      - name: DCL — Digital Commons Lab
+        url: https://dcl.fbk.eu/
+      
