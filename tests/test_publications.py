@@ -56,6 +56,15 @@ class BibliographyTests(unittest.TestCase):
             self.put(BASE + BASE.replace('example,', 'duplicate,'))
         with self.assertRaises(Exception):
             self.put(BASE + BASE)
+    def test_duplicate_field_keeps_previous_output(self):
+        self.put(BASE)
+        generate(self.source, self.output)
+        original = self.output.read_bytes()
+        self.source.write_text(BASE.replace('featured = {true}',
+                                            'featured = {true}, featured = {true}'))
+        with self.assertRaisesRegex(Exception, 'example.*duplicate featured field'):
+            generate(self.source, self.output)
+        self.assertEqual(self.output.read_bytes(), original)
     def test_malformed_and_unsafe_urls_fail(self):
         with self.assertRaises(Exception):
             self.put(BASE[:-3])
