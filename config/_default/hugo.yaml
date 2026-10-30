@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: C2S2
-baseURL: 'https://c2s2-trento.github.io/web/'
+baseURL: 'https://c2s2.unitn.it/'
 
 ############################
 ## LANGUAGE
